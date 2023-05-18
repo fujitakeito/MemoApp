@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import { Entypo } from '@expo/vector-icons';
 
 export default function MemoList() {
     return (
@@ -11,7 +12,7 @@ export default function MemoList() {
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
                     <View>
-                        <Text>X</Text>
+                        <Entypo name="cross" size={24} color="#b0b0b0" />
                     </View>
                 </View>
 
@@ -21,7 +22,7 @@ export default function MemoList() {
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
                     <View>
-                        <Text>X</Text>
+                        <Entypo name="cross" size={24} color="#b0b0b0" />
                     </View>
                 </View>
 
@@ -31,7 +32,7 @@ export default function MemoList() {
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
                     <View>
-                        <Text>X</Text>
+                        <Entypo name="cross" size={24} color="#b0b0b0" />
                     </View>
                 </View>
 
@@ -41,7 +42,7 @@ export default function MemoList() {
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
                     <View>
-                        <Text>X</Text>
+                        <Entypo name="cross" size={24} color="#b0b0b0" />
                     </View>
                 </View>
 
