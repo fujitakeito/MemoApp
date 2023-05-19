@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Entypo } from '@expo/vector-icons';
 
@@ -11,9 +11,9 @@ export default function MemoList() {
                         <Text style={styles.memoListItemTitle}>Shopping List</Text>
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
-                    <View>
+                    <TouchableOpacity>
                         <Entypo name="cross" size={24} color="#b0b0b0" />
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.memoListItem}>
@@ -21,9 +21,9 @@ export default function MemoList() {
                         <Text style={styles.memoListItemTitle}>Shopping List</Text>
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
-                    <View>
+                    <TouchableOpacity>
                         <Entypo name="cross" size={24} color="#b0b0b0" />
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.memoListItem}>
@@ -31,9 +31,9 @@ export default function MemoList() {
                         <Text style={styles.memoListItemTitle}>Shopping List</Text>
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
-                    <View>
+                    <TouchableOpacity>
                         <Entypo name="cross" size={24} color="#b0b0b0" />
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.memoListItem}>

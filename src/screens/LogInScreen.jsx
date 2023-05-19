@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import AppBar from '../components/AppBar'
 import Button from '../components/Button'
@@ -6,15 +6,17 @@ import Button from '../components/Button'
 export default function LogInScreen() {
     return (
         <View style={styles.container}>
-            <AppBar/>
+            <AppBar />
             <View style={styles.inner}>
                 <Text style={styles.title}>LogIn</Text>
-                <TextInput style={styles.input} value='email Address'/>
-                <TextInput style={styles.input} value='password'/>
-                <Button label='Submit'/>
+                <TextInput style={styles.input} value='email Address' />
+                <TextInput style={styles.input} value='password' />
+                <Button label='Submit' />
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Not Registered?</Text>
-                    <Text style={styles.footerLink}>Sign up here!</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.footerLink}>Sign up here!</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView } from 'react-native'
+import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView, } from 'react-native'
 import React from 'react'
 import AppBar from '../components/AppBar'
 import CircleButton from '../components/CircleButton'
