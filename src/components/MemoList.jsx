@@ -1,50 +1,32 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
 import { Entypo } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function MemoList() {
+
+    const navigation = useNavigation();
+
     return (
         <View>
             <View>
-                <View style={styles.memoListItem}>
+                <TouchableOpacity
+                    style={styles.memoListItem}
+                    onPress={() => { navigation.navigate("MemoDetail") }}
+                >
                     <View>
                         <Text style={styles.memoListItemTitle}>Shopping List</Text>
                         <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
                     </View>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.memoDelete}
+                        onPress={() => { Alert.alert('are you sure?') }}
+                    >
                         <Entypo name="cross" size={24} color="#b0b0b0" />
                     </TouchableOpacity>
-                </View>
+                </TouchableOpacity>
 
-                <View style={styles.memoListItem}>
-                    <View>
-                        <Text style={styles.memoListItemTitle}>Shopping List</Text>
-                        <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
-                    </View>
-                    <TouchableOpacity>
-                        <Entypo name="cross" size={24} color="#b0b0b0" />
-                    </TouchableOpacity>
-                </View>
 
-                <View style={styles.memoListItem}>
-                    <View>
-                        <Text style={styles.memoListItemTitle}>Shopping List</Text>
-                        <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
-                    </View>
-                    <TouchableOpacity>
-                        <Entypo name="cross" size={24} color="#b0b0b0" />
-                    </TouchableOpacity>
-                </View>
-
-                <View style={styles.memoListItem}>
-                    <View>
-                        <Text style={styles.memoListItemTitle}>Shopping List</Text>
-                        <Text style={styles.memoListItemDate}>20203年5月18日 10:00</Text>
-                    </View>
-                    <View>
-                        <Entypo name="cross" size={24} color="#b0b0b0" />
-                    </View>
-                </View>
 
             </View>
         </View>
@@ -71,4 +53,7 @@ const styles = StyleSheet.create({
         lineHeight: 16,
         color: "#848484",
     },
+    memoDelete: {
+        padding: 8,
+    }
 })
