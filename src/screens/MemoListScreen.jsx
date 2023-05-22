@@ -1,18 +1,24 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import MemoList from '../components/MemoList'
 import CircleButton from '../components/CircleButton'
+import LogOutButton from '../components/LogOutButton'
 
 export default function MemoListScreen(props) {
 
     const { navigation } = props;
+    useEffect(() => {
+        navigation.setOptions({
+            headerRight: () => <LogOutButton />,
+        });
+    }, []);
 
     return (
         <View style={styles.container}>
             <MemoList />
-            <CircleButton 
-            name='plus'
-            onPress={() => { navigation.navigate("MemoCreate") } }
+            <CircleButton
+                name='plus'
+                onPress={() => { navigation.navigate("MemoCreate") }}
             />
         </View>
     )
